@@ -1,5 +1,5 @@
 
-# A demonstration of the conjugate beta estimator statistical algorithm
+# The conjugate beta estimator statistical algorithm
 
 This repo contains a reference implementation for a statistical algorithm called
 Conjugate Beta Estimator (CBE) for computing
