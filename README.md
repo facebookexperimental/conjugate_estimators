@@ -24,8 +24,8 @@ See: https://en.wikipedia.org/wiki/Beth_Gladen.
 
 n should be adjusted using the following formula:
 
-  num_bits_per_label = (1 - entropy((sensitivity + specificity) / 2))
-  n_modified = num_bits_per_label * n
+    num_bits_per_label = (1 - entropy((sensitivity + specificity) / 2))
+    n_modified = num_bits_per_label * n
 
 The reason for the num_bits_per_label formula is that the rg formula is increasingly unstable when
 the mean of sensitivity and specificity approaches 0.5 (the max entropy value). The rg formula
