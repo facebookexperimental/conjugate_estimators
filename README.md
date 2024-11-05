@@ -18,12 +18,18 @@ Both mu and n can be adjusted to account for label noise.
 
 mu should be adjusted using the [Rogan Gladen](https://en.wikipedia.org/wiki/Beth_Gladen) (RG) estimator for the sample mean:
 
-    rg(mu, sensitivity, specificity) = (mu + specificity - 1) / (sensitivity + specificity - 1)
+    mu_modified = (mu + specificity - 1) / (sensitivity + specificity - 1)
 
 n should be adjusted using the following formula:
 
     num_bits_per_label = (1 - entropy((sensitivity + specificity) / 2))
     n_modified = num_bits_per_label * n
+
+the accuracy adjusted CBE formula is therefore
+
+    alpha_modified = mu_modified*n_modified + alpha_prior
+    beta_modified = (1-mu_modified)*n_modified + beta_prior
+    ci = [ppf(0.05, alpha_modified, beta_modified), ppf(0.95, alpha_modified, beta_modified)
 
 The reason for the num_bits_per_label formula is that the rg formula is increasingly unstable when
 the mean of sensitivity and specificity approaches 0.5 (the max entropy value) and the
