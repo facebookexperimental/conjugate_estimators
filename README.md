@@ -30,7 +30,7 @@ the mean of sensitivity and specificity approaches 0.5 (the max entropy value) a
 rg denominator approaches 0. The rg formula
 is maximally stable when sensitivity = specificity = 1, which is the case when labels are perfectly
 accurate. Therefore, we want the CI derived from the Beta distribution to grow wider as
-(sensitivity + specificity)/2 approeaches 0.5.
+(sensitivity + specificity)/2 approeaches 0.5 from 0 or 1.
 
 
 See the [CONTRIBUTING](CONTRIBUTING.md) file for how to help out.
