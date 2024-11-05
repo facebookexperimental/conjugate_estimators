@@ -28,7 +28,8 @@ n should be adjusted using the following formula:
     n_modified = num_bits_per_label * n
 
 The reason for the num_bits_per_label formula is that the rg formula is increasingly unstable when
-the mean of sensitivity and specificity approaches 0.5 (the max entropy value). The rg formula
+the mean of sensitivity and specificity approaches 0.5 (the max entropy value) and the
+rg denominator approaches 0. The rg formula
 is maximally stable when sensitivity = specificity = 1, which is the case when labels are perfectly
 accurate. Therefore, we want the CI derived from the Beta distribution to grow wider as
 (sensitivity + specificity)/2 approeaches 0.5.
