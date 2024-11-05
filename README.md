@@ -36,13 +36,12 @@ the mean of sensitivity and specificity approaches 0.5 (the max entropy value) a
 rg denominator approaches 0. The rg formula
 is maximally stable when sensitivity = specificity = 1, which is the case when labels are perfectly
 accurate. Therefore, we want the CI derived from the Beta distribution to grow wider as
-(sensitivity + specificity)/2 approaches 0.5 from 0 or 1. The relationship between
-average accuracy and # of bits per label is visualized in the graph below.
+(sensitivity + specificity)/2 approaches 0.5 from 0 or 1.
+
+The relationship between average accuracy and # of bits per label is visualized in the graph below.
 
 <img width="695" alt="Screenshot 2024-11-05 at 12 44 57 PM" src="https://github.com/user-attachments/assets/975f7141-6ed6-4327-9035-052b419fbc51">
 
-
-See the [CONTRIBUTING](CONTRIBUTING.md) file for how to help out.
 
 ## License
 Conjugate Estimators is MIT licensed, as found in the LICENSE file.
