@@ -16,11 +16,9 @@ where mu is the mean of the (weighted) sample labels and n is the sample size in
 
 Both mu and n can be adjusted to account for label noise.
 
-mu should be adjusted using the Rogan Gladen (RG) estimator for the sample mean:
+mu should be adjusted using the [Rogan Gladen](https://en.wikipedia.org/wiki/Beth_Gladen) (RG) estimator for the sample mean:
 
     rg(mu, sensitivity, specificity) = (mu + specificity - 1) / (sensitivity + specificity - 1)
-
-See: https://en.wikipedia.org/wiki/Beth_Gladen.
 
 n should be adjusted using the following formula:
 
