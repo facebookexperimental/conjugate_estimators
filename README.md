@@ -52,15 +52,15 @@ The following formula shows that the 1-H(X) formula, where H() is entropy and X 
 of containing an accurate label, can be expressed as the Bayesian information gain, or KL divergence
 between the posterior P and uniform prior Q:
 
-$$D_{\text{KL}}(P \parallel Q) = p \log_2\left(\frac{p}{q}\right) + (1-p) \log_2\left(\frac{1-p}{1-q}\right) = $$
-$$p \log_2\left(\frac{p}{0.5}\right) + (1-p) \log_2\left(\frac{1-p}{0.5}\right) =$$
-$$p \left(\log_2(p) - \log_2(0.5)\right) + (1-p) \left(\log_2(1-p) - \log_2(0.5)\right) =$$
-$$p \log_2(p) + p + (1-p) \log_2(1-p) + (1-p) =$$
-$$p \log_2(p) + (1-p) \log_2(1-p) + 1 = $$
+$$D_{\text{KL}}(P \parallel Q) = p * \log_2\left(\frac{p}{q}\right) + (1-p) *\log_2\left(\frac{1-p}{1-q}\right) =$$
+$$p *\log_2\left(\frac{p}{0.5}\right) + (1-p) * \log_2\left(\frac{1-p}{0.5}\right) =$$
+$$p *\left(\log_2(p) - \log_2(0.5)\right) + (1-p) * \left(\log_2(1-p) - \log_2(0.5)\right) =$$
+$$p *\log_2(p) + p + (1-p) *\log_2(1-p) + (1-p) =$$
+$$p *\log_2(p) + (1-p) * \log_2(1-p) + 1 = $$
 $$ 1 - H(X) $$
 
 To derive a label's probability X of containing a positive label, we can plug the labels' TPR
-p(b|a) and FPR p(b|\neg a) into Bayes's rule, again using the uniform prior assumption.
+$p(b|a)$ and FPR $p(b|\neg a)$ into Bayes's rule, again using the uniform prior assumption.
 
 $$X = p(a|b) = \frac{p(b|a)*p(a)}{p(b)} = $$
 $$\frac{p(b|a)*p(a)}{p(b|a)*p(a) + p(b|\neg a)*p(\neg a)} = $$
