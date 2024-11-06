@@ -1,11 +1,14 @@
 
 # The conjugate beta estimator statistical algorithm
 
+
+## Introduction
 This repo contains a reference implementation for a statistical algorithm called
 Conjugate Beta Estimator (CBE) for computing
 CIs for population means using (weighted) sample means and
 potentially noisy labels.
 
+## Basic algorithm
 The basic formula for CBE is
 
     alpha = mu*n + alpha_prior
@@ -14,6 +17,7 @@ The basic formula for CBE is
 
 where mu is the mean of the (weighted) sample labels and n is the sample size in bits
 
+## Accounting for label noise
 Both mu and n can be adjusted to account for label noise.
 
 mu should be adjusted using the [Rogan Gladen](https://en.wikipedia.org/wiki/Beth_Gladen) (RG) estimator for the sample mean:
@@ -41,6 +45,8 @@ accurate. Therefore, we want the CI derived from the Beta distribution to grow w
 The relationship between average accuracy and # of bits per label is visualized in the graph below.
 
 <img width="695" alt="Screenshot 2024-11-05 at 12 44 57 PM" src="https://github.com/user-attachments/assets/975f7141-6ed6-4327-9035-052b419fbc51">
+
+## Mathematical derivation
 
 The following formula shows that the 1-H(X) formula, where H() is entropy and X is a label's probability
 of containing an accurate label, can be expressed as the Bayesian information gain, or KL divergence
