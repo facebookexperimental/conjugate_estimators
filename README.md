@@ -48,7 +48,7 @@ The relationship between average accuracy and # of bits per label is visualized 
 
 ## Mathematical derivation
 
-The following formula shows that the 1-H(X) formula, where H is entropy and X a the content's
+The following derivation shows that the 1-H(X) formula, where H is entropy and X a the content's
 probability of being positive given the label, can be expressed as the Bayesian information gain, or KL divergence
 between the posterior P and uniform prior Q:
 
@@ -59,7 +59,7 @@ $$p *\log_2(p) + p + (1-p) *\log_2(1-p) + (1-p) =$$
 $$p *\log_2(p) + (1-p) * \log_2(1-p) + 1 = $$
 $$ 1 - H(X) $$
 
-To derive a label's probability X the content being positive using the labels TPR
+To derive X, the content's probability of being positive, using the labels TPR
 $p(b|a)$ and FPR $p(b|\neg a)$, we can plug them into Bayes's rule and simplify, again using the uniform prior assumption.
 
 $$X = p(a|b) = \frac{p(b|a)*p(a)}{p(b)} = $$
