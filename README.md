@@ -48,8 +48,7 @@ The relationship between average accuracy and # of bits per label is visualized 
 
 ## Mathematical derivation
 
-The following derivation shows that the 1-H(X) formula, where H is entropy and X a the content's
-probability of being positive given the label, can be expressed as the Bayesian information gain, or KL divergence
+The following derivation shows that the 1-H(X) formula, where H is entropy and X is (sensitivity + specificity)/2, can be expressed as the Bayesian information gain, or KL divergence
 between the posterior P and uniform prior Q:
 
 $$D_{\text{KL}}(P \parallel Q) = p * \log_2\left(\frac{p}{q}\right) + (1-p) *\log_2\left(\frac{1-p}{1-q}\right) =$$
