@@ -59,12 +59,5 @@ $$p *\log_2(p) + p + (1-p) *\log_2(1-p) + (1-p) =$$
 $$p *\log_2(p) + (1-p) * \log_2(1-p) + 1 = $$
 $$ 1 - H(X) $$
 
-To derive X, the content's probability of being positive, using the labels TPR
-$p(b|a)$ and FPR $p(b|\neg a)$, we can plug them into Bayes's rule and simplify, again using the uniform prior assumption.
-
-$$X = p(a|b) = \frac{p(b|a)*p(a)}{p(b)} = $$
-$$\frac{p(b|a)*p(a)}{p(b|a)*p(a) + p(b|\neg a)*p(\neg a)} = $$
-$$\frac{p(b|a)*0.5}{p(b|a)*0.5 + p(b|\neg a)*0.5} =$$
-$$\frac{p(b|a)}{p(b|a) + p(b|\neg a)}$$
 ## License
 Conjugate Estimators is MIT licensed, as found in the LICENSE file.
