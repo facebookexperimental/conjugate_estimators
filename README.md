@@ -59,8 +59,8 @@ $$p *\log_2(p) + p + (1-p) *\log_2(1-p) + (1-p) =$$
 $$p *\log_2(p) + (1-p) * \log_2(1-p) + 1 = $$
 $$ 1 - H(X) $$
 
-To derive a label's probability X of containing a positive label, we can plug the labels' TPR
-$p(b|a)$ and FPR $p(b|\neg a)$ into Bayes's rule, again using the uniform prior assumption.
+To derive a label's probability X the content being positive using the labels TPR
+$p(b|a)$ and FPR $p(b|\neg a)$, we can plug them into Bayes's rule and simplify, again using the uniform prior assumption.
 
 $$X = p(a|b) = \frac{p(b|a)*p(a)}{p(b)} = $$
 $$\frac{p(b|a)*p(a)}{p(b|a)*p(a) + p(b|\neg a)*p(\neg a)} = $$
