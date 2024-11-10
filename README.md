@@ -15,10 +15,14 @@ The basic formula for CBE is
     beta = (1-mu)*n + beta_prior
     ci = [ppf(0.05, alpha, beta), ppf(0.95, alpha, beta)
 
-where mu is the mean of the (weighted) sample labels and n is the sample size in bits.
+where mu is the mean of the (weighted) sample labels, n is the sample size in bits, and ppf is the
+[inverse CDF](https://en.wikipedia.org/wiki/Quantile_function) function.
 
 Consider using the [Kumaraswamy](https://en.wikipedia.org/wiki/Kumaraswamy_distribution) distribution
-instead of Beta for a more efficient, analytical, ppf (inverse CDF) function.
+instead of Beta for a more efficient analytical inverse CDF function.
+
+Because this formula is cheap to compute it can be applicable in streaming applications,
+where mu can represent a moving average.
 
 ## Accounting for label noise
 Both mu and n can be adjusted to account for label noise.
@@ -60,6 +64,13 @@ $$p *\left(\log_2(p) - \log_2(0.5)\right) + (1-p) * \left(\log_2(1-p) - \log_2(0
 $$p *\log_2(p) + p + (1-p) *\log_2(1-p) + (1-p) =$$
 $$p *\log_2(p) + (1-p) * \log_2(1-p) + 1 = $$
 $$ 1 - H(X) $$
+
+## Future Directions
+
+If you want to introduce uncertainty about sensitivity and specificity, it might be possible to mulitply
+num_bits_per_label by another 1-H(X) term, where X is the entropy of the sensitivity or specificity distribution.
+The intuition is that an infinite number of labels whose accuracy is unknown (uniformly distributed on [0,1])
+are as informative as zero labels.
 
 ## License
 Conjugate Estimators is MIT licensed, as found in the LICENSE file.
