@@ -15,7 +15,10 @@ The basic formula for CBE is
     beta = (1-mu)*n + beta_prior
     ci = [ppf(0.05, alpha, beta), ppf(0.95, alpha, beta)
 
-where mu is the mean of the (weighted) sample labels and n is the sample size in bits
+where mu is the mean of the (weighted) sample labels and n is the sample size in bits.
+
+Consider using the [Kumaraswamy](https://en.wikipedia.org/wiki/Kumaraswamy_distribution) distribution
+instead of Beta for a more efficient, analytical, ppf (inverse CDF) function.
 
 ## Accounting for label noise
 Both mu and n can be adjusted to account for label noise.
