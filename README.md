@@ -26,11 +26,12 @@ As n->inf, alpha_prior and beta_prior wash out, and the expression simplifies to
 
 The idea behind CBE -- a distribution whose mean converges to the population mean and whose
 variance shrinks with the number of labels -- can be generalized to non-Beta distributions
-if you need a different support than [0,1]. For example, the Gamme distribution can be parameterized as
+if you need a different support than [0,1]. For example, the for support on [0, inf] you can use a Gamme
+distribution that's parameterized as
 
     Gamma(alpha=1+(n*mu), beta=1+n)
 
-The Gaussian distribution can be parameterized as
+For support on [-inf, inf] the Gaussian distribution can be parameterized as
 
     Gaussian(mean=(prior + n*mu)/(n+1), var=1/(n+1))
 
