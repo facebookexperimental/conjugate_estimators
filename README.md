@@ -18,11 +18,24 @@ The basic formula for CBE is
 where mu is the mean of the (weighted) sample labels, n is the sample size in bits, and ppf is the
 [inverse CDF](https://en.wikipedia.org/wiki/Quantile_function) function.
 
+CBE is an unbiased estimator of the population mean because CBE's mean is alpha/(alpha + beta).
+As n->inf, alpha_prior and beta_prior wash out, and the expression simplifies to mu.
+
+The idea behind CBE -- a distribution whose mean converges to the population mean and whose
+variance shrinks with the number of labels -- can be generalized to non-Beta distributions
+if you need a different support than [0,1]. For example, the Gamme distribution can be parameterized as
+
+    Gamma(alpha=1+(n*mu), beta=1+n)
+
+The Gaussian distribution can be parameterized as
+
+    Gaussian((prior + n*mu)/(n+1), 1/(n+1))
+
+
 Consider using the [Kumaraswamy](https://en.wikipedia.org/wiki/Kumaraswamy_distribution) distribution
 instead of Beta for a more efficient analytical inverse CDF function.
 
-Because this formula is cheap to compute it can be applicable in streaming applications,
-where mu can represent a moving average.
+CBE can be applied in streaming applications, where mu can represent a moving average.
 
 ## Accounting for label noise
 Both mu and n can be adjusted to account for label noise.
