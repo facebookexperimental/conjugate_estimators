@@ -13,7 +13,7 @@ The basic formula for CBE is
 
     alpha = mu*n + alpha_prior
     beta = (1-mu)*n + beta_prior
-    ci = [ppf(0.05, alpha, beta), ppf(0.95, alpha, beta)
+    ci = [ppf(0.05, alpha, beta), ppf(0.95, alpha, beta)]
 
 where mu is the mean of the (weighted) sample labels, n is the sample size in bits, and ppf is the
 [inverse CDF](https://en.wikipedia.org/wiki/Quantile_function) function.
