@@ -5,7 +5,7 @@
 ## Introduction
 This repo contains a reference implementation for a statistical algorithm called
 Conjugate Beta Estimator (CBE) for computing
-CIs for population means using (weighted) sample means and
+confidence intervals (CIs) for population means using (weighted) sample means and
 potentially noisy labels.
 
 ## Basic algorithm
