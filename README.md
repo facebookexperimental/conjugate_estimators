@@ -29,7 +29,7 @@ if you need a different support than [0,1]. For example, the Gamme distribution 
 
 The Gaussian distribution can be parameterized as
 
-    Gaussian((prior + n*mu)/(n+1), 1/(n+1))
+    Gaussian(mean=(prior + n*mu)/(n+1), var=1/(n+1))
 
 
 Consider using the [Kumaraswamy](https://en.wikipedia.org/wiki/Kumaraswamy_distribution) distribution
