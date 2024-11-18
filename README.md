@@ -1,5 +1,5 @@
 
-# The conjugate Beta estimator statistical algorithm
+# The conjugate estimator statistical algorithm
 
 
 ## Introduction
