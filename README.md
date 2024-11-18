@@ -1,5 +1,5 @@
 
-# The conjugate estimator statistical algorithm
+# The conjugate Bayesian estimator statistical algorithm
 
 
 ## Introduction
